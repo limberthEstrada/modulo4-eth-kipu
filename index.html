@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleDEX Interface</title>
+    <script src="https://unpkg.com/ethers@6.9.0/dist/ethers.umd.js"></script>
+    <script defer src="app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        input {
+            padding: 5px;
+            margin: 5px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SimpleDEX Interface</h1>
+    
+    <div class="container">
+        <h2>Connect Wallet</h2>
+        <button id="connectButton">Connect Wallet</button>
+        <p id="walletInfo">Not connected</p>
+    </div>
+
+    <div class="container">
+        <h2>Add Liquidity</h2>
+        <input type="number" id="addLiquidityAmountA" placeholder="Amount Token A">
+        <input type="number" id="addLiquidityAmountB" placeholder="Amount Token B">
+        <button id="addLiquidityButton">Add Liquidity</button>
+    </div>
+
+    <div class="container">
+        <h2>Remove Liquidity</h2>
+        <input type="number" id="removeLiquidityAmountA" placeholder="Amount Token A">
+        <input type="number" id="removeLiquidityAmountB" placeholder="Amount Token B">
+        <button id="removeLiquidityButton">Remove Liquidity</button>
+    </div>
+
+    <div class="container">
+        <h2>Swap Tokens</h2>
+        <input type="number" id="swapAmount" placeholder="Amount to swap">
+        <button id="swapAforBButton">Swap A for B</button>
+        <button id="swapBforAButton">Swap B for A</button>
+    </div>
+
+    <div class="container">
+        <h2>Get Price</h2>
+        <button id="getPriceAButton">Get Price Token A</button>
+        <button id="getPriceBButton">Get Price Token B</button>
+        <p id="priceInfo">Price information will appear here</p>
+    </div>
+</body>
+</html>
